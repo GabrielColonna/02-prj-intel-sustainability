@@ -1,1 +1,133 @@
-/* Add your CSS here */
+/*
+  Simple, beginner-friendly CSS to create a clean look
+  using shades of white and blue for the Intel timeline page.
+*/
+
+body {
+  background-color: #f0f6fc; /* very light blue background */
+  color: #1a237e; /* dark blue text for good contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  /* Use a blue gradient for the header background */
+  background: linear-gradient(90deg, #e3f2fd 0%, #90caf9 100%);
+  padding: 24px 0;
+  text-align: center;
+  border-bottom: 2px solid #90caf9; /* blue border */
+}
+
+header img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 10px 0 8px 0;
+  font-size: 2em;
+}
+
+/* Make the section a flex container for the cards */
+section {
+  display: flex;              /* Arrange cards in a row */
+  flex-wrap: wrap;            /* Allow cards to wrap to next line */
+  justify-content: center;    /* Center cards horizontally */
+  gap: 24px;                  /* Space between cards */
+  padding: 24px 0;
+}
+
+section div {
+  background-color: #ffffff; /* white card */
+  border: 1px solid #bbdefb; /* light blue border */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.08);
+  width: 260px;
+  padding: 18px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Make each card bigger and limit cards per row */
+.card {
+  /* Increase the width and padding for bigger cards */
+  width: 350px;               /* Bigger card width */
+  max-width: 90vw;            /* Responsive on small screens */
+  padding: 24px;
+  margin: 12px 0;
+  /* ...existing card styles... */
+  border: 1px solid #ccc;
+  position: relative;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+/* Add a more prominent shadow and lift on hover for feedback */
+.card:hover {
+  box-shadow: 0 16px 40px rgba(30, 136, 229, 0.28); /* Bigger, darker blue shadow */
+  transform: translateY(-14px) scale(1.03); /* Lift and slightly scale up */
+  z-index: 2; /* Bring hovered card above others */
+}
+
+/* Hide extra details by default */
+.card-details {
+  display: none; /* Hidden by default */
+  background: #e6f7ff;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
+}
+
+/* Show details when hovering over the card */
+.card:hover .card-details {
+  display: block;
+}
+
+/* Hide the description paragraph by default */
+.card p {
+  display: none; /* Hidden until hover */
+}
+
+/* Show the paragraph when hovering over the card */
+.card:hover p {
+  display: block;
+}
+
+/* Style for the instruction at the bottom */
+body > p {
+  text-align: center;
+  color: #1976d2;
+  font-weight: bold;
+  margin: 24px 0 16px 0;
+}
+
+h2 {
+  color: #1976d2; /* medium blue for years */
+  margin: 0 0 4px 0;
+}
+
+h3 {
+  color: #1565c0; /* slightly darker blue for titles */
+  margin: 0 0 8px 0;
+}
+
+p {
+  margin: 8px 0;
+}
+
+/* Make images fit nicely inside each card */
+.card img {
+  width: 100%;         /* Image fills the card's width */
+  height: 120px;       /* Fixed height for all images */
+  object-fit: cover;   /* Crop image to fill area without distortion */
+  border-radius: 6px;  /* Slightly rounded corners for images */
+  margin-bottom: 12px; /* Space below image */
+  transition: height 0.3s, box-shadow 0.3s; /* Smooth transition for height */
+}
+
+/* Expand image for cards 5-9 on hover */
+.card:nth-child(n+5):hover img {
+  height: 220px;       /* Bigger image height on hover */
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18); /* Add a shadow for effect */
+}
