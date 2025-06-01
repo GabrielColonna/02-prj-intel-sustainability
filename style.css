@@ -1,8 +1,3 @@
-/*
-  Simple, beginner-friendly CSS to create a clean look
-  using shades of white and blue for the Intel timeline page.
-*/
-
 body {
   background-color: #f0f6fc; /* very light blue background */
   color: #1a237e; /* dark blue text for good contrast */
@@ -39,6 +34,16 @@ section {
 }
 
 section div {
+  background-color: #ffffff; /* white card */
+  border: 1px solid #bbdefb; /* light blue border */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.08);
+  width: 260px;
+  padding: 18px;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+section div.container.column-section {
   background-color: #ffffff; /* white card */
   border: 1px solid #bbdefb; /* light blue border */
   border-radius: 10px;
@@ -131,3 +136,228 @@ p {
   height: 220px;       /* Bigger image height on hover */
   box-shadow: 0 4px 16px rgba(25, 118, 210, 0.18); /* Add a shadow for effect */
 }
+
+/* Style the footer to match the Intel blue/white theme */
+footer {
+  background: linear-gradient(90deg, #e3f2fd 0%, #90caf9 100%); /* Blue gradient */
+  color: #1a237e; /* Dark blue text */
+  text-align: center;
+  padding: 18px 0 10px 0;
+  border-top: 2px solid #90caf9; /* Blue border on top */
+  font-size: 1em;
+  margin-top: 32px;
+}
+
+footer a {
+  color: #1976d2; /* Medium blue for links */
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: #0d47a1; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Style the subscription form */
+form.subscription-form {
+  /* Center the form and give it a card-like look */
+  background: #e3f2fd; /* Light blue background */
+  border: 1px solid #90caf9; /* Blue border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space inside the form */
+  max-width: 350px; /* Limit width for a neat look */
+  margin: 32px auto 24px auto; /* More space above, center horizontally */
+  box-shadow: 0 4px 16px rgba(30, 136, 229, 0.12); /* Softer, bigger shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px; /* Space between form elements */
+}
+
+/* Style the label for the email input */
+form.subscription-form label {
+  font-size: 1.1em;
+  color: #1565c0; /* Blue text for label */
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Style the input field */
+form.subscription-form input[type="email"] {
+  padding: 12px; /* Bigger padding for easier typing */
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 95%; /* Make input fill most of the form width */
+  margin-bottom: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #fff; /* White background for input */
+}
+
+/* Highlight input on focus */
+form.subscription-form input[type="email"]:focus {
+  border-color: #1976d2; /* Darker blue on focus */
+}
+
+/* Style the submit button */
+form.subscription-form button,
+form.subscription-form input[type="submit"] {
+  background: #1976d2; /* Medium blue */
+  color: #fff;         /* White text */
+  border: none;
+  border-radius: 4px;
+  padding: 12px 22px;  /* Bigger button */
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 4px;
+}
+
+form.subscription-form button:hover,
+form.subscription-form input[type="submit"]:hover {
+  background: #1565c0; /* Darker blue on hover */
+}
+
+/* Style the modal background and content */
+.modal-content {
+  background: #f0f6fc; /* Light blue background for modal */
+  border-radius: 10px;  /* Rounded corners */
+  border: 1px solid #90caf9; /* Blue border */
+  box-shadow: 0 4px 24px rgba(30, 136, 229, 0.18); /* Soft shadow */
+  padding: 0; /* Remove default padding */
+}
+
+/* Style the modal header */
+.modal-header {
+  background: #e3f2fd; /* Lighter blue for header */
+  border-bottom: 1px solid #90caf9;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+  padding: 16px 24px;
+}
+
+/* Style the modal title */
+.modal-title {
+  color: #1565c0; /* Blue title */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Style the modal body */
+.modal-body {
+  padding: 20px 24px;
+}
+
+/* Style the close button in the modal */
+.btn-close {
+  filter: none; /* Keep default look for beginners */
+}
+
+/* Style the subscription form inside the modal */
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px; /* Space between elements */
+}
+
+/* Style the label in the modal form */
+.modal-body label {
+  font-size: 1em;
+  color: #1976d2;
+  margin-bottom: 2px;
+}
+
+/* Style the input in the modal form */
+.modal-body input[type="email"] {
+  padding: 10px;
+  border: 1px solid #90caf9;
+  border-radius: 4px;
+  font-size: 1em;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Highlight input on focus */
+.modal-body input[type="email"]:focus {
+  border-color: #1976d2;
+}
+
+/* Style the submit button in the modal */
+.modal-body button[type="submit"] {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-body button[type="submit"]:hover {
+  background: #1565c0;
+}
+
+/* Special style for the container with 3 columns */
+/* This helps students see which section is different */
+.three-column-container {
+  background-color: #ffffff;
+  border: 1px solid #ffffff; 
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 28px;             /* extra space inside */
+  margin-bottom: 24px;       /* space below this container */
+  display: flex;             /* arrange columns in a row */
+  justify-content: space-between; /* space out the columns */
+  gap: 18px;                 /* space between columns */
+}
+
+.three-column-container .row {
+  background: #ffffff;    
+  border: 2px solid #ffffff; 
+  padding: 16px;
+  flex: 1;                   /* make columns equal width */
+  margin: 0 4px;             /* small space between columns */
+  box-shadow: none;
+}
+
+/* Style for each column inside the three-column container */
+.three-column-container .col {
+  background: #ffffff;       /* white background for columns */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  flex: 1;                   /* make columns equal width */
+  margin: 0 4px;             /* small space between columns */
+  transition: box-shadow 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+/* Add a hover effect to the columns in the three-column container */
+.three-column-container .col:hover {
+  box-shadow: 0 16px 40px rgba(30, 136, 229, 0.28); /* Blue shadow on hover */
+  transform: translateY(-14px) scale(1.03);          /* Lift and scale up */
+  z-index: 2; /* Bring hovered column above others */
+}
+
+.subscribe-btn {
+      background-color: #4fc3f7; /* Light blue */
+      color: white;
+      border: none;
+      border-radius: 25px; /* Makes the button more round */
+      padding: 12px 28px;
+      font-size: 1.1em;
+      margin: 20px auto 10px auto; /* Adds space above and below */
+      display: block; /* Makes the button take up its own line */
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .subscribe-btn:hover {
+      background-color: #0288d1; /* Slightly darker blue on hover */
+    }
